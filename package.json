@@ -26,6 +26,8 @@
         "@heroicons/react": "^2.1.5",
         "daisyui": "^4.12.13",
         "emoji-picker-react": "^4.12.0",
+        "framer-motion": "^11.11.9",
+        "react-icons": "^5.3.0",
         "react-markdown": "^9.0.1",
         "uuid": "^10.0.0"
     }

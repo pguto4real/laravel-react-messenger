@@ -1,3 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+#app{
+    @apply h-[100vh]
+}
+
+.conversation-item .avatar.online:before,
+.conversation-item .avatar.offline:before{
+    @apply w-2 h-2 top-[1%] right-[1%] outline outline-[1px]
+}
