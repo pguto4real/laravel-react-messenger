@@ -13,8 +13,9 @@ class Conversation extends Model
         'user_id2',
         'last_message_id',
     ];
-    public function lastMessage(){
-        return $this->belongsTo(Message::class,'last_message_id');
+    public function lastMessage()
+    {
+        return $this->belongsTo(Message::class, 'last_message_id');
     }
     public function user1()
     {
@@ -23,5 +24,16 @@ class Conversation extends Model
     public function user2()
     {
         return $this->belongsTo(User::class, 'user_id2');
+    }
+    public static function getConversationsSidebar(User $user)
+    {
+        $users = User::getUsersExceptUser($user);
+        $groups = Group::getGroupsForUser($user);
+
+        return $users->map(function (User $user) {
+            return $user->toConversationArray();
+        })->concat($groups->map(function (Group $group) {
+            return $group->toConversationArray();
+        }));
     }
 }
