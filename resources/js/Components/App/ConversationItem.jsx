@@ -29,8 +29,8 @@ const ConversationItem = ({
             classes += "border-blue-500 bg-black/20";
         }
     }
-    console.log("currentUser.is_admin", currentUser.is_admin);
-    console.log("conversation.is_user", conversation.is_user);
+    // console.log("currentUser.is_admin", currentUser.is_admin);
+    // console.log("conversation.is_user", conversation.is_user);
     return (
         <Link
             href={

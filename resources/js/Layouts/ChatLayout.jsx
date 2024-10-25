@@ -81,7 +81,7 @@ const ChatLayout = ({ children }) => {
                     updatedUsers[user.id] = user;
                     return updatedUsers;
                 });
-                console.log("joining", users);
+                console.log("joining", user);
             })
             .leaving((user) => {
                 setOnlineUsers((prevOnlineUsers) => {
@@ -89,7 +89,7 @@ const ChatLayout = ({ children }) => {
                     delete updatedUsers[user.id];
                     return updatedUsers;
                 });
-                console.log("leaving", users);
+                console.log("leaving", user);
             })
             .error((error) => {
                 console.log("error", error);
