@@ -16,18 +16,19 @@ const ChatLayout = ({ children }) => {
     const [onlineUsers, setOnlineUsers] = useState({});
     const isUserOnline = (userId) => onlineUsers[userId];
 
-    console.log("conversations", conversations);
-    console.log("selectedConversation", selectedConversation);
-    console.log("sortedConversations", sortedConversations);
+    // console.log("conversations", conversations);
+    // console.log("selectedConversation", selectedConversation);
+    // console.log("sortedConversations", sortedConversations);
 
     const onSearch = (ev) => {
         const search = ev.target.value.toLowerCase();
+    
         setSortedConversations(
             localConversations.filter((conversation) => {
-                return (
-                    conversation.name.toLowerCase().includes(search) ||
-                    conversation.email.toLowerCase().includes(search)
-                );
+                
+                return conversation.name.toLowerCase().includes(search);
+                // ||
+                // conversation.email.toLowerCase().includes(search)
             })
         );
     };

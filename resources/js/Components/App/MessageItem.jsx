@@ -7,8 +7,8 @@ import { formatMessageDateLong } from "@/helpers";
 const MessageItem = ({ message, attachmentClick }) => {
     const page = usePage();
     const currentUser = page.props.auth.user;
-    console.log("currentUser",currentUser)
-    console.log("message",message)
+    // console.log("currentUser",currentUser)
+    // console.log("message",message)
     return (
         <div
             className={
