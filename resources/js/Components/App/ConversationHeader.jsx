@@ -2,6 +2,7 @@ import { ArrowLeftIcon } from "@heroicons/react/24/solid";
 import { Link } from "@inertiajs/react";
 import React from "react";
 import UserAvatar from "./UserAvatar";
+import GroupAvatars from "./GroupAvatars";
 
 const ConversationHeader = ({ selectedConversation }) => {
     return (
