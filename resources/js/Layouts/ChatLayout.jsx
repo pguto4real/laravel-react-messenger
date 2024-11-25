@@ -16,7 +16,7 @@ const ChatLayout = ({ children }) => {
     const [onlineUsers, setOnlineUsers] = useState({});
     const isUserOnline = (userId) => onlineUsers[userId];
 
-    // console.log("conversations", conversations);
+    console.log("conversations", conversations);
     // console.log("selectedConversation", selectedConversation);
     // console.log("sortedConversations", sortedConversations);
 

@@ -23,7 +23,7 @@ const MessageItem = ({ message, attachmentClick }) => {
                 {message.sender_id !== currentUser.id
                     ? message.sender.name
                     : ""}
-                <time datetime="" className="text-xs opacity-50 ml-2">
+                <time dateTime="" className="text-xs opacity-50 ml-2">
                     {formatMessageDateLong(message.created_at)}
                 </time>
             </div>
